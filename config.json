@@ -1,0 +1,6 @@
+{
+    "htmlTemplatePath": "./src/index.html",
+    "jsonDataPath": "./src/index.json",
+    "output": "./src/out.html",
+    "A4Type": ""
+}

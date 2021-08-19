@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>发票-平台-行业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "宋体";
+            text-rendering: geometricPrecision;
+        }
+
+        .page {
+            position: relative;
+            padding: 20pt;
+            width: 595pt;
+            height: 842pt;
+            zoom: 1.3338;
+            border: 1pt solid #000;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .headerOne {
+            margin-bottom: 4pt;
+            font-size: 8pt;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #333333;
+            line-height: 11pt;
+        }
+
+        .divider {
+            width: 555pt;
+            height: 1pt;
+            border-top: 1pt solid #E3E8F1;
+        }
+
+        .headerTwo {
+            margin-top: 9pt;
+            font-size: 7pt;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #333333;
+            line-height: 9pt;
+        }
+
+        .alertCard {
+            margin: 10pt 0;
+            padding: 7pt 15pt 5pt 5pt;
+            width: 555pt;
+            height: 30pt;
+            background: #FEF6E0;
+            line-height: 30pt;
+            box-sizing: border-box;
+        }
+
+        .alertCard .text {
+            font-size: 7pt;
+            font-family: PingFangSC-Regular, PingFang SC;
+            color: #CC9A64;
+            line-height: 10pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="headerOne">标题</div>
+        <div class="divider">
+        <div class="headerTwo">标题一</div>
+        <div class="alertCard">
+            <div class="text" style="color: red">
+                数据一是：{{.one}}，数据二是：{{.two}}，数据三是：{{.three}}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
