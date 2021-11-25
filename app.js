@@ -41,11 +41,11 @@ app.listen(port, function () {
                 fn: function (event, file) {
                     if (file === 'src/index.html') {
                         generateHtml(genConfig);
-                    if (A4Type) {
-                        generatePDF(A4Type, output);
+                        if (A4Type) {
+                            generatePDF(A4Type, output);
+                        }
                     }
-                    }
-                    bs.reload()
+                    bs.reload();
                 },
             }
         ],

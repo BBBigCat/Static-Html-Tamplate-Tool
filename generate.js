@@ -6,20 +6,27 @@ function absolutePath(path) {
 }
 
 function generateHtml(params) {
-    const {html, json, out} = params;
+    const { html, json, out } = params;
     // html 模板地址
     const htmlTemplatePath = absolutePath(html);
     // json 数据地址
     const jsonDataPath = absolutePath(json);
     // 输出文件
     const output = absolutePath(out);
-    child.exec(`./htmltool -path ${htmlTemplatePath} -json ${jsonDataPath} -out ${output}`)
+    child.exec(`./htmltool -path ${htmlTemplatePath} -json ${jsonDataPath} -out ${output}`, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+    });
 }
 
 function changeSuffix(path) {
-    return path.replace(/\.html/ ,(str, $1) => {
+    return path.replace(/\.html/, (str, $1) => {
         return '.pdf';
-    } )
+    })
 }
 
 // hor = horizontal | ver = Vertical
@@ -33,7 +40,7 @@ function generatePDF(A4Type, output) {
     }
 }
 
-module. exports = {
+module.exports = {
     generateHtml,
     generatePDF
 }
