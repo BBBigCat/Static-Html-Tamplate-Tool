@@ -1,4 +1,4 @@
-# static-html-tamplate-tool
+# static-html-template-tool
 
 ## 静态 html 模板工具
 
@@ -34,7 +34,6 @@
 2. 目标 html 模板文件（src/index.html）修改后，输出页面（src/out.html）对应变动
 3. json 数据文件变化后，输出页面（src/out.html）对变化
 4. 通过 config.json 里的配置 A4Type，配合本地 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具，可以直接生成 pdf 文件预览效果
-
 
 ## Usage
 
